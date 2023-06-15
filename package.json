@@ -1,0 +1,23 @@
+{
+  "name": "tip-calculator-app",
+  "version": "1.0.0",
+  "description": "This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsnooshin/Tip-calculator-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itsnooshin/Tip-calculator-app/issues"
+  },
+  "homepage": "https://github.com/itsnooshin/Tip-calculator-app#readme",
+  "devDependencies": {
+    "parcel": "^2.9.2"
+  }
+}
