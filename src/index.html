@@ -29,11 +29,9 @@
             <div class="input-parent">
               <img src="./images/icon-dollar.svg" alt="" class="dollar-icon" />
               <div class="input-bill">
-                <input
-                  type="text"
-                  class="main__container-bill__number"
-                  placeholder="0"
-                />
+                <form action="#">
+                  <input type="text" class="bill__number" placeholder="0" />
+                </form>
               </div>
             </div>
           </div>
@@ -52,11 +50,9 @@
             <h2 class="main__container-bill__title">Number of People</h2>
             <div class="input-parent">
               <img src="./images/icon-person.svg" alt="" class="dollar-icon" />
-              <input
-                type="text"
-                class="main__container-bill__number"
-                placeholder="0"
-              />
+              <form action="#">
+                <input type="text" class="people__number" placeholder="0" />
+              </form>
             </div>
           </div>
         </div>
@@ -66,14 +62,14 @@
               <p class="title-total">Tip Amount</p>
               <span class="person-tip">/ person</span>
             </div>
-            <h2 class="total">$0.00</h2>
+            <h2 class="total">$ <span class="tip-amount">0.00</span></h2>
           </div>
           <div class="right-slide-total">
             <div class="total-tip-person">
               <p class="title-total">Total</p>
               <span class="person-tip">/ person</span>
             </div>
-            <h2 class="total">$0.00</h2>
+            <h2 class="total">$ <span class="total-amount">0.00</span></h2>
           </div>
 
           <div class="button-reset">
