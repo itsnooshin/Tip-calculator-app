@@ -5,6 +5,7 @@ const total = document.querySelector('.total-amount');
 const tipPer = document.querySelectorAll('.btn-tip');
 const tipAmount = document.querySelector('.tip-amount');
 const tipnum = document.querySelectorAll('.tip-but');
+const btnReset = document.querySelectorAll('.btn-end-reset');
 
 let prevDiv = null;
 const numBill = function () {
@@ -40,7 +41,7 @@ const calcuate = function (e) {
   const er = tipAmount1 / second;
   const amount = er;
   let totalamount = ((first + tipAmount1) / second).toFixed(2);
- 
+
   total.textContent = totalamount;
   tipAmount.textContent = amount;
 };
@@ -52,4 +53,7 @@ const sum = function () {
 };
 bill.addEventListener('input', numBill);
 numel.addEventListener('input', numpeople);
+
+
+
 sum();

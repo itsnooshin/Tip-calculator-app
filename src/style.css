@@ -118,7 +118,7 @@ body {
   padding: 1.5rem 0;
   width: 100%;
 }
-.numbe-of-people .main__container-bill__title {
+.numbe-of-people .bill__title {
   margin-bottom: 0.8rem;
 }
 .left-side {
@@ -191,25 +191,66 @@ body {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.main__container-bill__number:focus {
+.bill__number:focus {
   outline: 1px solid red;
+}
+.btn-end-reset{
+  cursor: pointer;
 }
 
 @media (max-width: 700px) {
-  .main__conatiner {
-    grid-template-columns: 1fr;
-    align-items: center;
+  .main {
+    display: block;
+
     max-width: 400px;
+    margin: 0 auto;
+    margin: 0 auto 20rem auto;
+    width: 100%;
+  }
+
+  .main__conatiner {
+    /* margin-top: 10rem; */
+    grid-template-columns: 1fr;
   }
   .left-side {
     width: 80%;
   }
 
-  .main__container-bill__number {
+  .bill__number {
     width: 100%;
   }
   .buttons {
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
+     grid-template-columns: 1fr 1fr;
+     width: 100%;
+     place-items: center;
+    
+  }
+  .btn-tip  {
+    font-size: 2.5rem;
+    padding: 1rem 3rem;
+    width: 142px;
+  }
+  .btn-custom{
+    font-size: 2.5rem;
+    padding: 1rem 2rem;
+  }
+  .input-bill{
+    
+    
+  }
+  .bill__number{
+    width: 300px;
+  }
+  .left-side{
+   
+    /* width: 350px; */
+  }
+  .people__number{
+    width: 300px;
+
+  }
+  .numbe-of-people{
+   
+   
   }
 }
