@@ -196,7 +196,10 @@ body {
   padding-bottom: 1rem;
 }
 .bill__number:focus {
-  outline: 1px solid red;
+  outline: 2px solid #26c2ae;
+}
+.people__number:focus {
+  /* outline: 2px solid #26c2ae; */
 }
 .btn-end-reset {
   cursor: pointer;
