@@ -74,6 +74,10 @@ body {
   grid-column-gap: 12px;
   grid-row-gap: 12px;
 }
+.prevDivIocn {
+  background-color: none;
+  color: #ffff;
+}
 .btn-tip {
   border: none;
   background-color: var(--color-Very-dark-cyan);
@@ -194,7 +198,7 @@ body {
 .bill__number:focus {
   outline: 1px solid red;
 }
-.btn-end-reset{
+.btn-end-reset {
   cursor: pointer;
 }
 
@@ -209,7 +213,6 @@ body {
   }
 
   .main__conatiner {
-    /* margin-top: 10rem; */
     grid-template-columns: 1fr;
   }
   .left-side {
@@ -220,37 +223,27 @@ body {
     width: 100%;
   }
   .buttons {
-     grid-template-columns: 1fr 1fr;
-     width: 100%;
-     place-items: center;
-    
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    place-items: center;
   }
-  .btn-tip  {
+  .btn-tip {
     font-size: 2.5rem;
     padding: 1rem 3rem;
     width: 142px;
   }
-  .btn-custom{
+  .btn-custom {
     font-size: 2.5rem;
     padding: 1rem 2rem;
   }
-  .input-bill{
-    
-    
-  }
-  .bill__number{
-    width: 300px;
-  }
-  .left-side{
-   
-    /* width: 350px; */
-  }
-  .people__number{
-    width: 300px;
 
+  .bill__number {
+    width: 300px;
   }
-  .numbe-of-people{
-   
-   
+  .left-side {
+    max-width: 450px;
+  }
+  .people__number {
+    width: 300px;
   }
 }
