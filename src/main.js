@@ -47,6 +47,9 @@ function btnel() {
   btnCostum.addEventListener('input', function () {
     selectNumber = Number(btnCostum.value);
   });
+  btnCostum.addEventListener('click', function () {
+    dom();
+  });
 }
 
 const calcuate = function () {
@@ -56,8 +59,10 @@ const calcuate = function () {
   const tipAmount3 = (first * tip) / 100;
   const er56 = parseFloat(tipAmount3 / second).toFixed(2);
   let totalamount = parseFloat(((first + tipAmount3) / second).toFixed(2));
-  total.textContent = totalamount;
-  tipAmount.textContent = er56;
+  if (totalamount !== Infinity && er56 !== Infinity) {
+    total.textContent = totalamount;
+    tipAmount.textContent = er56;
+  }
 };
 btnel();
 
@@ -68,11 +73,11 @@ btnReset.addEventListener('click', function () {
   tipAmount.textContent = '0.00';
   prevDiv.style.backgroundColor = '';
   prevDiv.style.color = '#ffff';
+  btnCostum.value = '';
 });
 
 const dom = function () {
   const second = Number(numel.value);
-
   if (!second) {
     numel.style.border = '2px solid #E17052';
     let newP = document.createElement('p');
