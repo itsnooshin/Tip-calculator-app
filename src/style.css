@@ -201,8 +201,23 @@ body {
 .people__number:focus {
   /* outline: 2px solid #26c2ae; */
 }
+.btn-tip.not {
+  background-color: white;
+  background-color: none;
+  width: 100px;
+}
 .btn-end-reset {
   cursor: pointer;
+}
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-error-message{
+  color: #E17457;
+  font-size: 1.5rem;
+  font-family: inherit;
 }
 
 @media (max-width: 700px) {

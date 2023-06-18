@@ -15,15 +15,12 @@ const numBill = function () {
 };
 const numpeople = function () {
   let num1 = Number(numel.value);
-  // dom();
+  dom();
   calcuate();
-  btn();
-  // btnel();
 };
 // eventlistener
 bill.addEventListener('input', numBill);
 numel.addEventListener('input', numpeople);
-btnCostum.addEventListener('input', btn);
 
 function btnel() {
   tipPer.forEach(function (numBtn) {
@@ -40,25 +37,30 @@ function btnel() {
         const btnNumi = parseInt(numBtn.textContent);
         console.log(btnNumi);
         selectNumber = btnNumi;
+        console.log(selectNumber);
+        dom();
+        calcuate();
       }
-      calcuate();
     });
+  });
+
+  btnCostum.addEventListener('input', function () {
+    selectNumber = Number(btnCostum.value);
   });
 }
 
 const calcuate = function () {
   const first = Number(bill.value);
   const second = Number(numel.value);
-  const tip1 = selectNumber;
-  const tipAmount3 = (first * tip1) / 100;
+  const tip = selectNumber;
+  const tipAmount3 = (first * tip) / 100;
   const er56 = parseFloat(tipAmount3 / second).toFixed(2);
   let totalamount = parseFloat(((first + tipAmount3) / second).toFixed(2));
   total.textContent = totalamount;
   tipAmount.textContent = er56;
-
 };
 btnel();
-// reset button
+
 btnReset.addEventListener('click', function () {
   bill.value = '';
   numel.value = '';
@@ -73,21 +75,16 @@ const dom = function () {
 
   if (!second) {
     numel.style.border = '2px solid #E17052';
-  } else {
+    let newP = document.createElement('p');
+    newP.textContent = "can't be zero ";
+    newP.classList.add('main-error-message');
+    let elt = document.querySelector('.main__container-Num__title');
+    elt.insertAdjacentElement('afterend', newP);
+  } else if (second === Number(numel.value)) {
     numel.style.border = 'none';
+    let err = document.querySelector('.main-error-message');
+    if (err) {
+      err.remove();
+    }
   }
-};
-
-const btn = function (e) {
-  const first = Number(bill.value);
-  const second = Number(numel.value);
-  const tip34 = parseInt(btnCostum.value);
-  const tipAmount4 = Number(((first * tip34) / 100).toFixed(2));
-  const tipAmount6 = parseFloat(tipAmount4 / second);
-  let totalamount = parseFloat((first + tipAmount4) / second);
-  // console.log(first, second, tip34, tipAmount4, totalamount, tipAmount6 , total.textContent);
-  // total.textContent = totalamount;
-  // tipAmount.textContent = tipAmount6;
-  // const total1 = document.querySelector('.total-amount');
-  // total1.textContent = totalamount;
 };
