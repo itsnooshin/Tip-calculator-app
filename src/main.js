@@ -1,29 +1,27 @@
 'use strict';
-const bill = document.querySelector('.bill__number');
-const numel = document.querySelector('.people__number');
-const total = document.querySelector('.total-amount');
-const tipPer = document.querySelectorAll('.btn-tip');
-const tipAmount = document.querySelector('.tip-amount');
-const tipnum = document.querySelectorAll('.tip-but');
+const billDollar = document.querySelector('.bill__number');
+const numberOfPeoople = document.querySelector('.people__number');
+const totalOfEachPerson = document.querySelector('.total-amount');
+const BtnTipPercentage = document.querySelectorAll('.btn-tip');
+const tipAmountEachPerson = document.querySelector('.tip-amount');
 const btnReset = document.querySelector('.btn-end-reset');
-const prevDiv1 = document.querySelector('.prevDivIocn');
 const btnCostum = document.querySelector('.btn-custom');
 let selectNumber = null;
 let prevDiv = null;
 const numBill = function () {
-  let num = Number(bill.value);
+  let num = Number(billDollar.value);
 };
 const numpeople = function () {
-  let num1 = Number(numel.value);
+  let num1 = Number(numberOfPeoople.value);
   dom();
   calcuate();
 };
 // eventlistener
-bill.addEventListener('input', numBill);
-numel.addEventListener('input', numpeople);
+billDollar.addEventListener('input', numBill);
+numberOfPeoople.addEventListener('input', numpeople);
 
 function btnel() {
-  tipPer.forEach(function (numBtn) {
+  BtnTipPercentage.forEach(function (numBtn) {
     numBtn.addEventListener('click', function (e) {
       e.preventDefault();
       if (numBtn === e.target) {
@@ -53,43 +51,45 @@ function btnel() {
 }
 
 const calcuate = function () {
-  const first = Number(bill.value);
-  const second = Number(numel.value);
+  const bill = Number(billDollar.value);
+  const people = Number(numberOfPeoople.value);
   const tip = selectNumber;
-  const tipAmount3 = (first * tip) / 100;
-  const er56 = parseFloat(tipAmount3 / second).toFixed(2);
-  let totalamount = parseFloat(((first + tipAmount3) / second).toFixed(2));
-  if (totalamount !== Infinity && er56 !== Infinity) {
-    total.textContent = totalamount;
-    tipAmount.textContent = er56;
+  const getTipAmount = (bill * tip) / 100;
+  const getTipPerson = parseFloat(getTipAmount / people).toFixed(2);
+  let totalamount = parseFloat(((bill + getTipAmount) / people).toFixed(2));
+  if (totalamount !== Infinity && getTipPerson !== Infinity) {
+    totalOfEachPerson.textContent = totalamount;
+    tipAmountEachPerson.textContent = getTipPerson;
   }
 };
 btnel();
 
 btnReset.addEventListener('click', function () {
-  bill.value = '';
-  numel.value = '';
-  total.textContent = '0.00';
-  tipAmount.textContent = '0.00';
+  billDollar.value = '';
+  numberOfPeoople.value = '';
+  totalOfEachPerson.textContent = '0.00';
+  tipAmountEachPerson.textContent = '0.00';
   prevDiv.style.backgroundColor = '';
   prevDiv.style.color = '#ffff';
   btnCostum.value = '';
 });
 
 const dom = function () {
-  const second = Number(numel.value);
+  const second = Number(numberOfPeoople.value);
   if (!second) {
-    numel.style.border = '2px solid #E17052';
+    numberOfPeoople.style.border = '2px solid #E17052';
     let newP = document.createElement('p');
     newP.textContent = "can't be zero ";
     newP.classList.add('main-error-message');
     let elt = document.querySelector('.main__container-Num__title');
     elt.insertAdjacentElement('afterend', newP);
-  } else if (second === Number(numel.value)) {
-    numel.style.border = 'none';
+  } else if (second === Number(numberOfPeoople.value)) {
+    numberOfPeoople.style.border = 'none';
     let err = document.querySelector('.main-error-message');
     if (err) {
       err.remove();
     }
   }
 };
+
+

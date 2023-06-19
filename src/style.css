@@ -28,7 +28,7 @@ body {
   width: 60px;
 }
 
-.left-side {
+.main__conatiner__left-side {
   padding: 2rem 2rem 2rem 3rem;
 }
 .main {
@@ -125,7 +125,7 @@ body {
 .numbe-of-people .bill__title {
   margin-bottom: 0.8rem;
 }
-.left-side {
+.main__conatiner__left-side {
   width: 100%;
 }
 
@@ -233,7 +233,7 @@ body {
   .main__conatiner {
     grid-template-columns: 1fr;
   }
-  .left-side {
+  .main__conatiner__left-side {
     width: 80%;
   }
 
@@ -258,7 +258,7 @@ body {
   .bill__number {
     width: 300px;
   }
-  .left-side {
+  .main__conatiner__left-side {
     max-width: 450px;
   }
   .people__number {
