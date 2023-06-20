@@ -15,73 +15,89 @@
   </head>
   <body>
     <main class="main">
-      <div class="main__header-logo">
-        <img
-          src="./images/logo.svg"
-          class="img-logo"
-          alt="logo image for main page"
-        />
+      <div class="header">
+        <div class="header__logo">
+          <img
+            src="./images/logo.svg"
+            class="img-logo"
+            alt="A logo image for main page"
+          />
+        </div>
       </div>
-      <div class="main__conatiner">
-        <div class="main__conatiner__left-side">
-          <div class="bill">
-            <h2 class="main__container-bill__title">Bill</h2>
-            <div class="input-parent">
-              <img src="./images/icon-dollar.svg" alt="" class="dollar-icon" />
-              <div class="input-bill">
-                <form action="#">
-                  <input type="text" class="bill__number" placeholder="0" />
-                </form>
-              </div>
-            </div>
+
+      <div class="conatiner">
+        <div class="conatiner__left">
+          <p class="conatiner__left-title">Bill</p>
+          <div class="conatiner__left-form">
+            <img
+              src="./images/icon-dollar.svg"
+              alt="a dollar icon"
+              class="conatiner__from-icon"
+            />
+            <form action="#" class="conatiner__form">
+              <input
+                type="text"
+                class="conatiner__form-input-bill"
+                placeholder="0"
+              />
+            </form>
           </div>
-          <div class="special-tip">
-            <h2 class="main__container-bill__title">Select Tip %</h2>
-            <div class="buttons">
-              <button class="btn-tip">5%</button>
-              <button class="btn-tip">10%</button>
-              <button class="btn-tip">15%</button>
-              <button class="btn-tip">25%</button>
-              <button class="btn-tip">50%</button>
-              <input type="text" class="btn-custom" placeholder="custom" />
-            </div>
+          <p class="conatiner__left-title title-tip">Select Tip %</p>
+          <div class="conatiner__button">
+            <button class="btn-tip">5%</button>
+            <button class="btn-tip">10%</button>
+            <button class="btn-tip">15%</button>
+            <button class="btn-tip">25%</button>
+            <button class="btn-tip">50%</button>
+            <input type="text" class="btn-custom" placeholder="custom" />
           </div>
-          <div class="numbe-of-people">
-            <div class="container">
-              <h2 class="main__container-Num__title">Number of People</h2>
-            </div>
-            <div class="input-parent">
-              <img src="./images/icon-person.svg" alt="" class="dollar-icon" />
-              <form action="#">
-                <input type="text" class="people__number" placeholder="0" />
-              </form>
-            </div>
+          <div class="container__numopeople">
+            <p class="conatiner__left-title-Num">Number of People</p>
+          </div>
+          <div class="conatiner__left-form">
+            <img
+              src="./images/icon-person.svg"
+              alt="a person icon"
+              class="conatiner__from-icon"
+            />
+            <form action="#">
+              <input
+                type="text"
+                class="conatiner__form-input-people"
+                placeholder="0"
+              />
+            </form>
           </div>
         </div>
-        <div class="right-side">
-          <div class="right-slide-tip">
-            <div class="total-tip-person">
-              <p class="title-total">Tip Amount</p>
-              <span class="person-tip">/ person</span>
+        <!-- right side -->
+        <div class="container__right">
+          <div class="conatiner__right-content">
+            <div class="conatiner__price tip-amount">
+              <div class="total-tip-person">
+                <p class="conatiner__price__title__tip">Tip Amount</p>
+                <span class="person-tip">/ person</span>
+              </div>
+              <h2 class="conatiner__price__total">
+                $<span class="tip-amount-el">0.00</span>
+              </h2>
             </div>
-            <!-- <h2 class="total">$ <span class="tip-amount">0.00</span></h2> -->
-            <h2 class="total">$<span class="tip-amount">0.00</span></h2>
-          </div>
-          <div class="right-slide-total">
-            <div class="total-tip-person">
-              <p class="title-total">Total</p>
-              <span class="person-tip">/ person</span>
+            <div class="conatiner__price total-amount">
+              <div class="total__tip-person">
+                <p class="conatiner__price__title__tip">Total</p>
+                <span class="person-tip">/ person</span>
+              </div>
+              <h2 class="conatiner__price__total">
+                $<span class="total-amount-el">0.00</span>
+              </h2>
             </div>
-            <h2 class="total">$<span class="total-amount">0.00</span></h2>
           </div>
 
-          <div class="button-reset">
-            <button class="btn-end-reset">RESET</button>
+          <div class="container__right-button">
+            <button class="container__right-btn">RESET</button>
           </div>
         </div>
       </div>
     </main>
-
     <script src="./main.js"></script>
   </body>
 </html>
