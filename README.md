@@ -17,7 +17,7 @@ Your users should be able to:
 
 ## Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [live site](https://tip-calculator-app-sigma-hazel.vercel.app/)
 
 
 
@@ -39,7 +39,7 @@ Your users should be able to:
 
 
 ## Author
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Twitter - [@itsnooshindeve](https://www.twitter.com/itsnooshindev)
 
 
 
