@@ -39,7 +39,7 @@ Your users should be able to:
 
 
 ## Author
-- Twitter - [@itsnooshindeve](https://www.twitter.com/itsnooshindev)
+- Twitter - [@itsnooshindev](https://www.twitter.com/itsnooshindev)
 
 
 
