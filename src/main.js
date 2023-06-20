@@ -83,7 +83,7 @@ const timeout = function () {
       prevDiv.style.color = '#ffff';
       btnReset.style.backgroundColor = '#0D686D';
     
-  }, 2000);
+  }, 3000);
 };
 
 const reset = function () {
