@@ -41,9 +41,10 @@ function btnel() {
         const btnNumi = parseInt(numBtn.textContent);
         console.log(btnNumi);
         selectNumber = btnNumi;
-
-        dom();
-        calcuate();
+        if(totalamount !== NaN && getTipPerson !== NaN) {
+          calcuate();
+          dom();
+        }
       }
     });
   });
